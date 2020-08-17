@@ -1,0 +1,17 @@
+.c-image-card {
+    box-shadow: none;
+
+    .sub-title-part {
+        padding-right: 5px;
+        display: inline-block;
+        span {
+            &.label {
+                font-weight: bold;
+            }
+        }
+    }
+   
+    app-image {
+        margin: 16px;
+    }
+}

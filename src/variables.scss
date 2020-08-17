@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-grey);
+$primary: mat-color($app-primary);
+
+
+$border-radius: 4px;
+$border-color:  $primary;

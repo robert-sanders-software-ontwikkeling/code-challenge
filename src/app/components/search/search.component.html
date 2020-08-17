@@ -1,0 +1,12 @@
+<div  class="c-search" >
+    <input #input
+        class="c-search__input"
+        type="text" 
+        [placeholder]="placeholder"
+        [(ngModel)]="searchText"
+        (keydown)="onKeydown($event)">
+  
+    <div class = "c-search__button" (click)="onSearch()">
+        <mat-icon>search</mat-icon>
+    </div>
+</div>

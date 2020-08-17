@@ -1,0 +1,32 @@
+<mat-toolbar color="primary"  class="c-toolbar">
+    <h1>Image search</h1>
+    <span class="spacer"></span>
+
+    <span class="label">
+        Number of columns
+    </span>
+    <mat-select class="c-toolbar__column-count-select" [(ngModel)]="selectedColumnCount" (ngModelChange)="emitColumnCountChanged()">
+        <mat-option *ngFor="let columnCount of columnCounts" [value]="columnCount">
+            {{columnCount}}
+        </mat-option>
+    </mat-select>
+
+    <span class="label">
+        Type
+    </span>
+    <mat-select class="c-toolbar__image-type-select"  [(ngModel)]="selectedImageType" (ngModelChange)="emitImageTypeChanged()" >
+        <mat-option *ngFor="let imageType of imageTypes" [value]="imageType" >
+            {{imageType}}
+        </mat-option>
+    </mat-select>
+    <span class="label">
+        Rating
+    </span>
+    <mat-select class ="c-toolbar__rating-select" [(ngModel)]="selectedRating" (ngModelChange)="emitRatingChanged()">
+        <mat-option *ngFor="let rating of ratings" [value]="rating" >
+            {{rating}}
+        </mat-option>
+    </mat-select>
+    
+    <app-search (search)="emitSearch($event)"></app-search>
+</mat-toolbar>
