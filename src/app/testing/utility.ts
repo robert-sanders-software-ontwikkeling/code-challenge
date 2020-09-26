@@ -15,3 +15,10 @@ export function getChildElements<T extends HTMLElement>(
 
     return debugElement.queryAll(By.css(selector)).map(de => de.nativeElement);
 }
+
+export function getChildComponents<T>(
+    debugElement: DebugElement,
+    componentType: new() => T): T[] {
+
+    return debugElement.queryAll(By.directive(componentType)).map(de => de.componentInstance);
+}

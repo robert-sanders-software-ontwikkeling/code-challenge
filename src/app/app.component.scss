@@ -1,20 +1,7 @@
-.c-application {
-    height: 100%;
-    $padding: 10px;
+.c-app {
     display: flex;
-    flex-direction: column;
- 
-    &__content {
-        flex: 1;
-        padding: $padding;
-        overflow: auto;
-    }  
-    &__footer {
-        display: flex;
-        justify-content: center;
-    }
-
-    app-image {
-        cursor: pointer;
-    }
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }

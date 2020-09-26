@@ -1,33 +1,5 @@
-<div class="c-application">
-  <div class="c-application__header">
-    <app-toolbar 
-      [selectedImageType]="selectedImageType" 
-      [imageTypes]="imageTypes" 
-      (imageTypeChanged)="onSelectedImageTypeChanged($event)"
-      [selectedColumnCount]="selectedColumnCount"
-      [columnCounts]="columnCounts"
-      (columnCountChanged)="setColumnCount($event)"
-      [selectedRating]="selectedRating"
-      [ratings]="ratings"
-      (ratingChanged)="onSelectedRatingChanged($event)"
-      (search)="search($event)">
-    </app-toolbar>
-  </div>
-  <div class="c-application__content">
-    <mat-grid-list [cols]="selectedColumnCount" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let image of images">
-        <app-image (click)="showImageDetails(image)" [src]="image.url"></app-image>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div>
 
-  <div class="c-application__footer">
-    <mat-paginator   
-      [length]="totalCount"
-      [pageIndex]="currentPage"
-      [pageSize]="pageSize"
-      [pageSizeOptions]="pageSizeOptions"
-      (page)="onPageEvent($event)">
-    </mat-paginator>
-  </div>
+<div class="c-app">
+   <router-outlet></router-outlet>
 </div>
+

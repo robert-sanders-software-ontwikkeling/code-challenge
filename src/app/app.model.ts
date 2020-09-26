@@ -1,7 +1,5 @@
 export interface ApplicationSettings {
-    readonly gyphyApiKey: string;
-    readonly gyphyApiUrl: string;
-    readonly badWords?: readonly string[];
+    readonly authServiceUrl: string;
 }
 
-export const applicationSettingsInjectionToken = 'ApplicationSettings';
+export const APPLICATION_SETTINGS = 'ApplicationSettings';
