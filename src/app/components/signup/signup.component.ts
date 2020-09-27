@@ -1,3 +1,4 @@
+import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,6 +11,7 @@ import { AuthenticationService } from '../../services/authentication.service';
 })
 export class SignupComponent {
     public readonly form: FormGroup;
+    private $signingUp = false;
     private readonly errorMessages = {
         firstName: {
             required: 'First name is required'
@@ -63,15 +65,21 @@ export class SignupComponent {
         return  this.getErrors('password');
     }
 
+    public get signingUp(): boolean {
+        return this.$signingUp;
+    }
+
     public signup(): void {
         if (this.form.invalid) {
             this.form.markAllAsTouched();
             return;
         }
 
+        this.$signingUp = true;
         this.authenticationService.signup(this.form.value).subscribe(
             () => this.router.navigateByUrl('thanks'),
             () => {
+                this.$signingUp = false;
                 window.alert('Oeps something went wrong. Please try again.');
             }
         );

@@ -24,8 +24,10 @@
         [errors]="passwordErrors">
     </app-input>
     <div class="c-signup-form-buttons">
-        <button type="submit">
+        <button *ngIf="!signingUp" type="submit">
             Signup
         </button>
+
+        <img  *ngIf="signingUp" src="assets/three-dots.svg" height="11px"/>
     </div>
 </form>
