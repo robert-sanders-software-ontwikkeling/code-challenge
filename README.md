@@ -10,7 +10,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Tests
 
 I have written more extensive unit tests for order line component (order-line.component.spec.ts)
-to illustrate how you can test and component
+to illustrate how you can test a component
 
 ## Running unit tests
 
