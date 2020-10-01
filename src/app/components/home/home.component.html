@@ -1,0 +1,16 @@
+
+<div class="c-home">
+    <div class='c-home-header'>
+        <img class='c-home-header-basket-button' src="assets/basket.svg"  routerLink="/basket"/>
+
+        <span class='c-home-header-ordered-product-count'>
+            {{numberOfOrderedProducts|async}}
+        </span>
+    </div>
+    
+    <div class='c-home-body'>
+        <app-products [products]="products|async">
+    
+        </app-products>
+    </div>
+</div>

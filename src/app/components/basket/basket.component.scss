@@ -1,0 +1,21 @@
+.c-basket {
+    width: 600px;
+  
+    &__header {
+        display: flex;
+        padding: 10px;
+        flex-direction: row-reverse;
+    }
+
+    &__body {
+        background-color: white;
+        padding: 20px;
+
+        &__total {
+           text-decoration: underline;
+            text-align: right;
+            padding-right: 40px;
+            padding-top: 20px;
+        }
+    }
+}

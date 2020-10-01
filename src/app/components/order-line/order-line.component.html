@@ -1,0 +1,10 @@
+<div *ngIf="orderLine" class="c-order-line">
+    <div class="c-order-line__title">
+        {{orderLine.product.title}}
+    </div>
+    <input class="c-order-line__number" type="number" [(ngModel)]="number" min="1" />
+    <div class="c-order-line__amount">
+        {{orderLine.number * orderLine.product.price | currency:'EUR':'symbol'}}
+    </div>
+   <img class="c-order-line__remove" src="assets/remove.svg" (click)="removeLine()"/>
+</div>

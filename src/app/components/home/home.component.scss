@@ -1,0 +1,25 @@
+.c-home {
+    padding: 40px;
+    &-header {
+        padding: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        &-basket-button {
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            
+        }
+        &-ordered-product-count {
+            padding:10px;
+            display: flex;
+            align-items: center;
+        }
+    
+    }
+
+    &-body {
+        padding: 20px;
+        background-color: white;
+    }
+}

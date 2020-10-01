@@ -1,0 +1,21 @@
+
+<div class="c-basket">
+    <div class='c-basket__header'>
+        <button routerLink="/home">Back to shop</button>
+    </div>
+    
+    <div *ngIf="orderLines$|async as orderLines" class='c-basket__body' >
+        <ng-container *ngIf="orderLines.length > 0">
+            <app-order-line *ngFor="let orderLine of orderLines" [orderLine]="orderLine">
+
+            </app-order-line>
+            <div class='c-basket__body__total'>
+                {{total$|async|currency:'EUR':'symbol'}}
+             </div>
+        </ng-container>
+
+        <h2 *ngIf="orderLines.length == 0">
+            No orders
+        </h2>
+    </div>
+</div>

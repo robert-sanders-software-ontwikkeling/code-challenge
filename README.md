@@ -7,6 +7,11 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Tests
+
+I have written more extensive unit tests for order line component (order-line.component.spec.ts)
+to illustrate how you can test and component
+
 ## Running unit tests
 
 Run `npm test` to run all tests

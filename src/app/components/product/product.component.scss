@@ -1,0 +1,21 @@
+.c-product {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: solid 1px gray;
+
+    &-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 10px
+    }
+}

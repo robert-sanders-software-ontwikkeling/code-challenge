@@ -1,0 +1,19 @@
+<div *ngIf="product" class="c-product">
+    <div class="c-product-body">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>{{product.title}}</td>
+            </tr>
+    
+            <tr>
+                <td>Price</td>
+                <td> {{ product.price | currency:'EUR':'symbol'}}</td>
+            </tr>
+        </table>
+
+    </div> 
+    <div class="c-product-footer">
+        <button (click)="addToCard()">Add to basket</button>
+    </div>
+</div>
